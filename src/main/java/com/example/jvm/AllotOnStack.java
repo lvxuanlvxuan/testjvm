@@ -44,6 +44,6 @@ public class AllotOnStack {
     private static void alloc() {
         User user = new User();
         user.setId(1);
-        user.setName("zhuge");
+        user.setName("xiaolv");
     }
 }
