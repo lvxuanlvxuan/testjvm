@@ -72,7 +72,7 @@ public class MyClassLoaderTest {
 
     public static void main(String args[]) throws Exception {
         //初始化自定义类加载器，会先初始化父类ClassLoader，其中会把自定义类加载器的父加载器设置为应用程序类加载器AppClassLoader
-        MyClassLoader classLoader = new MyClassLoader("D:/test");
+        MyClassLoader classLoader = new MyClassLoader("E:/test");
         //D盘创建 com.example.jvm 目录，将User类丢入该目录
         Class clazz = classLoader.loadClass("com.example.jvm.User",false);
         Object obj = clazz.newInstance();
@@ -81,7 +81,7 @@ public class MyClassLoaderTest {
         System.out.println(clazz.getClassLoader());
 
         System.out.println();
-        MyClassLoader classLoader1 = new MyClassLoader("D:/test1");
+        MyClassLoader classLoader1 = new MyClassLoader("E:/test1");
         //D盘创建 com.example.jvm 目录，将User类丢入该目录
         Class clazz1 = classLoader1.loadClass("com.example.jvm.User",false);
         Object obj1 = clazz1.newInstance();
